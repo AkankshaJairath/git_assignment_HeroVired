@@ -13,12 +13,12 @@ This repository contains assignments of Git and GitHub where 3 tasks projects ar
 
 2.LFS
 
-   Setup 
+      Setup 
    
-   Usage
+      Usage
 
 3.Geometry Calculator
 
-  Feature Implementation
+    Feature Implementation
   
-  Workflow steps
+    Workflow steps
