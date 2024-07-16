@@ -1,62 +1,70 @@
 # git_assignment_HeroVired
-# Calculator Plus
+# Geometry Calculator
 
-Create a ‘dev’ Branch and Add Code:
-Clone the repository to your local machine:
+Create a New Branch (“feature/circle-area”):
 
-git clone <ssh_repository_url>
+git checkout -b feature/circle-area
 
-Create a new branch named “dev” and switch to it:
+Stash Changes for Circle Area Feature:
+git stash save "WIP: Area of Circle feature"
 
-git checkout -b dev
+Verify that your working directory is clean:
 
-Add the provided code snippet to a Python file (e.g., CalculatorPlus.py).
+git status
 
-Implement the Square Root Feature:
-Uncomment the square_root function in Calculator class.
+Create a New Branch (“feature/rectangle-area”):
+git checkout -b feature/rectangle-area
 
-Complete its implementation to calculate the square root of a number using math.sqrt(x).
+Stash Changes for Rectangle Area Feature:
+git stash save "WIP: Area of Rectangle feature"
 
-Test the Square Root Feature:
-Uncomment the relevant section in if name == "main": block.
+Verify the working directory:
 
-Test the square root feature by providing a value for num3.
+git status
 
-Merge ‘dev’ Branch with Main
+Switch Back to Circle Area Branch:
+git checkout feature/circle-area
 
-Create a New Branch (“feature/sqrt”):
+Retrieve the stashed changes:
 
-Create a new branch for the square root feature:
+git stash list
 
-git checkout -b feature/sqrt
+git stash apply stash@{1}
 
-Add the Square Root Code:
-Implement the square root feature in Calculator class.
+Complete the circle area feature implementation and save the changes.
 
-Commit the changes to the feature/sqrt branch.
+Commit and Push Circle Area Feature:
+git add .
 
-Handle Critical Bug in Main:
-Switch back to the dev branch:
+git commit -m "Implement circle area feature"
 
-git checkout dev
+git push origin feature/circle-area
 
-Fix the bug in the divide function:
+Switch Back to Rectangle Area Branch:
+git checkout feature/rectangle-area
 
-Commit the bug fix.
+Retrieve the stashed changes:
 
-Create a Pull Request (“feature/sqrt” into “main”):
-Push changes to GitHub:
+git stash list
 
-git push origin feature/sqrt
+git stash apply stash@{0}
 
-Create a pull request targeting the main branch.
+Complete the rectangle area feature implementation and save the changes.
+
+Commit and Push Rectangle Area Feature:
+git add .
+
+git commit -m "Implement rectangle area feature"
+
+git push origin feature/rectangle-area
+
+Create Pull Requests:
+Create pull requests for both branches targeting the ‘dev’ branch on GitHub.
+
+Review and Merge to main
 
 
-Merge “feature/sqrt” into ‘dev’: Once the pull request is approved, merge the feature/sqrt branch into dev.
 
-Test in ‘dev’ and Merge into ‘main’:
 
-Test the application in the dev branch.
 
-Merge dev into main.
 
