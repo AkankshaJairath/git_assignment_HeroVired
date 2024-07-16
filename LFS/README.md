@@ -1,62 +1,43 @@
 # git_assignment_HeroVired
-# Calculator Plus
+# Git LFS Integration
 
-Create a ‘dev’ Branch and Add Code:
-Clone the repository to your local machine:
+1. Install Git LFS:
+Download it directly from the official Git LFS website https://git-lfs.com/
 
+2. Create a new GitHub repository 'git_assignment_HeroVired' in the GitHub website
+
+3. Clone the repository on local machine:
 git clone <ssh_repository_url>
 
-Create a new branch named “dev” and switch to it:
+4. Change the directory to our repository directory 'git_assignment_HeroVired':
+cd <repository_name>
 
-git checkout -b dev
+5. Checkout and create a branch 'lfs':
+git checkout -b <branchname>
 
-Add the provided code snippet to a Python file (e.g., CalculatorPlus.py).
+6. Initialize Git LFS in Your Repository: 
+Run the following command to initialize Git LFS:
+git lfs install
 
-Implement the Square Root Feature:
-Uncomment the square_root function in Calculator class.
+7. Add the large file extension in order to track it
+git lfs track "*.pdf"
 
-Complete its implementation to calculate the square root of a number using math.sqrt(x).
+8. Now making sure .gitattributes is tracked:
+git add .gitattributes
 
-Test the Square Root Feature:
-Uncomment the relevant section in if name == "main": block.
+9. Add the large file
+git add <large_file_name_with_extension>
 
-Test the square root feature by providing a value for num3.
+10. Commit the changes:
+git commit -m "Added large file using LFS"
 
-Merge ‘dev’ Branch with Main
+11. Push the changes to remote repository:
+git push -u origin <branchname>
 
-Create a New Branch (“feature/sqrt”):
+12. Clone on Another Machine: Clone the repository:
+git clone <ssh_repository_url>
 
-Create a new branch for the square root feature:
-
-git checkout -b feature/sqrt
-
-Add the Square Root Code:
-Implement the square root feature in Calculator class.
-
-Commit the changes to the feature/sqrt branch.
-
-Handle Critical Bug in Main:
-Switch back to the dev branch:
-
-git checkout dev
-
-Fix the bug in the divide function:
-
-Commit the bug fix.
-
-Create a Pull Request (“feature/sqrt” into “main”):
-Push changes to GitHub:
-
-git push origin feature/sqrt
-
-Create a pull request targeting the main branch.
+13. Open the file and verify that the file is downloaded correctly
 
 
-Merge “feature/sqrt” into ‘dev’: Once the pull request is approved, merge the feature/sqrt branch into dev.
-
-Test in ‘dev’ and Merge into ‘main’:
-
-Test the application in the dev branch.
-
-Merge dev into main.
 
